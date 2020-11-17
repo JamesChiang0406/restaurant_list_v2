@@ -1,0 +1,63 @@
+<form action="/create/new" method="POST" class="d-flex flex-column flex-wrap ml-5">
+  <h3 class="mt-2 text-danger">新增店家</h3>
+
+  <div class="form-group" style="width: 65px;">
+    <label for="exampleInputEmail1">評分</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="rating">
+  </div>
+
+  <div class="form-group" style="width: 200px;">
+    <label for="exampleInputEmail1">電話</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="phone">
+  </div>
+
+  <div class="form-group" style="width: 241px;">
+    <label for="exampleFormControlSelect1">類別</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="category">
+      <option>中東料理</option>
+      <option>日本料理</option>
+      <option>義式餐廳</option>
+      <option>美式</option>
+      <option>酒吧</option>
+      <option>咖啡</option>
+      <option>其他</option>
+    </select>
+  </div>
+
+  <div class="form-group" style="width: 300px;">
+    <label for="exampleInputEmail1">店名</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name">
+  </div>
+
+  <div class="form-group" style="width: 300px;">
+    <label for="exampleInputEmail1">英文店名</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name_en">
+  </div>
+
+  <div class="form-group" style="width: 800px;">
+    <label for="exampleInputEmail1">介紹圖片位址</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="image">
+  </div>
+
+  <div class="form-group" style="width: 800px;">
+    <label for="exampleInputEmail1">地址</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="location">
+  </div>
+
+  <div class="form-group" style="width: 800px;">
+    <label for="exampleInputEmail1">google位址</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="google_map">
+  </div>
+
+  <div class="form-group" style="width: 800px;">
+    <label for="exampleFormControlTextarea1">敘述</label>
+
+    <div class="d-flex">
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+
+      <button class="btn btn-primary ml-3" type="submit" style="width: 5rem;height:41px;">新增</button>
+    </div>
+
+  </div>
+
+</form>
