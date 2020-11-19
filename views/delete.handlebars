@@ -1,4 +1,4 @@
-<form action="/restaurant/{{restaurant._id}}/delete" method="POST">
+<form action="/restaurant/{{restaurant._id}}?_method=DELETE" method="POST">
   <h3>確定要刪除{{restaurant.name}}嗎？</h3>
   <button class="btn btn-primary" type="submit" name="answer" value="{{restaurant._id}}">Delete</button>
   <button class="btn btn-primary" type="submit" name="answer" value="/">Return</button>
