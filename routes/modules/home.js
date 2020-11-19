@@ -10,4 +10,8 @@ router.get('/', (req, res) => {
     .catch(error => console.log(error))
 })
 
+router.post('/', (req, res) => {
+  console.log(req.body)
+})
+
 module.exports = router

@@ -1,4 +1,5 @@
 const express = require('express')
+const restaurant = require('../../models/restaurant')
 const router = express.Router()
 const Restaurant = require('../../models/restaurant')
 
@@ -80,17 +81,5 @@ router.post('/new', (req, res) => {
     .then(() => res.redirect('/'))
     .catch(error => console.log(error))
 })
-
-/*app.get('/search', (req, res) => {
-  const keyword = req.query.keyword
-  const searchRestaurants = restaurantList.results.filter(restaurant => {
-    return restaurant.name.toLowerCase().includes(keyword.toLowerCase())
-  })
-  res.render('index', { restaurants: searchRestaurants })
-
-  if (searchRestaurants.length === 0) {
-    res.render('index',)
-  }
-})*/
 
 module.exports = router
