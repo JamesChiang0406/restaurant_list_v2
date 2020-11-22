@@ -1,19 +1,20 @@
-<form action="/restaurant/{{restaurant._id}}?_method=PUT" method="POST" class="d-flex flex-column flex-wrap ml-5">
+<form action="/restaurant/{{restaurant._id}}?_method=PUT" method="POST"
+  class="d-flex flex-column align-items-center flex-wrap m-3">
   <h3 class="mt-2 text-info">修改頁面</h3>
 
-  <div class="form-group" style="width: 65px;">
+  <div class="form-group" style="width: 700px;">
     <label for="exampleInputEmail1">評分</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="rating"
       value="{{restaurant.rating}}">
   </div>
 
-  <div class="form-group" style="width: 200px;">
+  <div class="form-group" style="width: 700px;">
     <label for="exampleInputEmail1">電話</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="phone"
       value="{{restaurant.phone}}">
   </div>
 
-  <div class="form-group" style="width: 241px;">
+  <div class="form-group" style="width: 700px;">
     <label for="exampleFormControlSelect1">類別</label>
     <select class="form-control" id="exampleFormControlSelect1" name="category">
       <option>中東料理</option>
@@ -26,37 +27,37 @@
     </select>
   </div>
 
-  <div class="form-group" style="width: 300px;">
+  <div class="form-group" style="width: 700px;">
     <label for="exampleInputEmail1">店名</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name"
       value="{{restaurant.name}}">
   </div>
 
-  <div class="form-group" style="width: 300px;">
+  <div class="form-group" style="width: 700px;">
     <label for="exampleInputEmail1">英文店名</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name_en"
       value="{{restaurant.name_en}}">
   </div>
 
-  <div class="form-group" style="width: 800px;">
+  <div class="form-group" style="width: 700px;">
     <label for="exampleInputEmail1">介紹圖片位址</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="image"
       value="{{restaurant.image}}">
   </div>
 
-  <div class="form-group" style="width: 800px;">
+  <div class="form-group" style="width: 700px;">
     <label for="exampleInputEmail1">地址</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="location"
       value="{{restaurant.location}}">
   </div>
 
-  <div class="form-group" style="width: 800px;">
+  <div class="form-group" style="width: 700px;">
     <label for="exampleInputEmail1">google位址</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="google_map"
       value="{{restaurant.google_map}}">
   </div>
 
-  <div class="form-group" style="width: 800px;">
+  <div class="form-group" style="width: 700px;">
     <label for="exampleFormControlTextarea1">敘述</label>
 
     <div class="d-flex">

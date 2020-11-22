@@ -11,7 +11,7 @@
 
 
 ## 使用方法
-1. 在終端機上輸入 git clone https://github.com/JamesChiang0406/restaurant_list.git
+1. 在終端機上輸入 git clone https://github.com/JamesChiang0406/restaurant_list_v2.git
 
 2. 輸入 cd 進入所下載的資料夾
 
