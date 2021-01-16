@@ -8,6 +8,7 @@ require('./config/mongoose')
 const restaurantList = require('./restaurant.json')
 const app = express()
 const port = 3000
+const session = require('express-session')
 
 // setting template engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
@@ -18,6 +19,11 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(methodOverrid('_method'))
 app.use(routes)
+app.use(session({
+  secret: 'ThisIsMySecret',
+  resave: false,
+  saveUninitialized: true
+}))
 
 // start and listen on the Express server
 app.listen(port, () => {
