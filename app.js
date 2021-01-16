@@ -12,6 +12,7 @@ const session = require('express-session')
 const usePassport = require('./config/passport')
 usePassport(app)
 
+
 // setting template engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
