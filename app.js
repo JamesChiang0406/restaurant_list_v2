@@ -9,6 +9,8 @@ const restaurantList = require('./restaurant.json')
 const app = express()
 const port = 3000
 const session = require('express-session')
+const usePassport = require('./config/passport')
+usePassport(app)
 
 // setting template engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
