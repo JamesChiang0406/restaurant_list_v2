@@ -10,9 +10,9 @@ module.exports = app => {
     User.findOne({ email })
       .then(user => {
         if (!user) {
-          return done(null, false, { message: 'Thar Email is not registered!' })
+          return done(null, false, { message: 'That email is not registered!' })
         }
-        if (password !== user.password) {
+        if (user.password !== password) {
           return done(null, false, { message: 'Email or Password incorrect.' })
         }
         return done(null, user)
@@ -21,10 +21,11 @@ module.exports = app => {
   }))
 
   passport.serializeUser((user, done) => {
-    return done(null, user.id)
+    done(null, user.id)
   })
   passport.deserializeUser((id, done) => {
     User.findById(id)
+      .lean()
       .then(user => done(null, user))
       .catch(err => done(err, null))
   })
