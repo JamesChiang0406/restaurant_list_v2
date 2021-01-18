@@ -8,17 +8,20 @@ require('./config/mongoose')
 const restaurantList = require('./restaurant.json')
 const app = express()
 const port = 3000
-
-// setting session and passport
 const session = require('express-session')
+const usePassport = require('./config/passport')
+const flash = require('connect-flash')
+
+// setting session and passport and flash
 app.use(session({
   secret: 'ThisIsMySecret',
   resave: false,
   saveUninitialized: true
 }))
 
-const usePassport = require('./config/passport')
 usePassport(app)
+
+app.use(flash())
 
 // setting template engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
@@ -27,6 +30,9 @@ app.set('view engine', 'handlebars')
 app.use((req, res, next) => {
   res.locals.isAuthenticated = req.isAuthenticated()
   res.locals.user = req.user
+  res.locals.success_msg = req.flash('success_msg')
+  res.locals.warning_msg = req.flash('warning_msg')
+  res.locals.loginErr = req.flash('loginErr')
   next()
 })
 
